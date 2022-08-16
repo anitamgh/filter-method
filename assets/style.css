@@ -1,0 +1,38 @@
+body{
+    background-color: darkseagreen;
+}
+ul{
+    display: flex;
+    flex-wrap:wrap;
+    gap:20px
+}
+li{
+    list-style:none;
+}
+button{
+    color:#fff;
+    margin-left:40px;
+    border:none;
+    padding:5px 10px;
+    min-width:90px;
+    border-radius: 10px;
+    font-size:17px
+}
+#volleyball{
+    background-color: darkviolet;
+}
+#basketball{
+    background-color:mediumseagreen;
+}
+#golf{
+    background-color:lightseagreen;
+}
+#tennis{
+    background-color:mediumslateblue;
+}
+#soccer{
+    background-color:teal;
+}
+#all{
+    background-color:darkolivegreen;
+}
