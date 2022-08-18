@@ -64,7 +64,7 @@ let soccerBtn = document.getElementById("soccer")
 let allBtn = document.getElementById("all")
 
 
-function printSport(item){
+const printSport = item => {
     let listItem = document.createElement("li")
     let itemPoster = document.createElement("img")
     let sportName = document.createElement("p")
@@ -80,63 +80,63 @@ function printSport(item){
     ul.appendChild(listItem)
 }
 
-function printSports(){
+const printSports = _ =>{
     sportsList.map(printSport)
 }
 
 printSports()
 
-function volleyballOnly(item){
+const volleyballOnly = item => {
     return item.sportCategory == "volleyball"
 }
 
-function basketballOnly(item){
+const basketballOnly = item => {
     return item.sportCategory == "basketball"
 }
 
-function tennisOnly(item){
+const tennisOnly = item => {
     return item.sportCategory == "tennis"
 }
 
-function golfOnly(item){
+const golfOnly = item => {
     return item.sportCategory == "golf"
 }
 
-function soccerOnly(item){
+const soccerOnly = item => {
     return item.sportCategory == "soccer"
 }
 
-volleyballBtn.addEventListener("click" , function(){
+volleyballBtn.addEventListener("click" , _ => {
     let newarray = sportsList.filter(volleyballOnly)
     ul.innerHTML = ""
     newarray.map(printSport)
 })
 
-basketballBtn.addEventListener("click" , function(){
+basketballBtn.addEventListener("click" , _ => {
     let newarray = sportsList.filter(basketballOnly)
     ul.innerHTML = ""
     newarray.map(printSport)
 })
 
-tennisBtn.addEventListener("click" , function(){
+tennisBtn.addEventListener("click" , _ => {
     let newarray = sportsList.filter(tennisOnly)
     ul.innerHTML = ""
     newarray.map(printSport)
 })
 
-golfBtn.addEventListener("click" , function(){
+golfBtn.addEventListener("click" , _ => {
     let newarray = sportsList.filter(golfOnly)
     ul.innerHTML = ""
     newarray.map(printSport)
 })
 
-soccerBtn.addEventListener("click" , function(){
+soccerBtn.addEventListener("click" , _ => {
     let newarray = sportsList.filter(soccerOnly)
     ul.innerHTML = ""
     newarray.map(printSport)
 })
 
-allBtn.addEventListener("click" , function(){
+allBtn.addEventListener("click" , _ => {
     ul.innerHTML = ""
     printSports()
 })
